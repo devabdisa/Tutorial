@@ -1,0 +1,97 @@
+/* Reset all default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make all images responsive by default */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Mobile-first approach styles */
+/* Header styling with black background */
+.blueBg {
+  background-color: #000;
+  padding-block: 1.25rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive text sizes */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+/* Container for car images */
+.cars-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Spacing between car image containers */
+.cars-section div {
+  margin-block: 2rem;
+  width: 100%; /* Ensuring full width in mobile */
+}
+
+/* Hide the missing car element on mobile */
+.missing-car {
+  display: none;
+}
+
+/* Style for the "More Cars" heading */
+.more {
+  text-align: center;
+}
+
+/* Footer specific styling */
+footer .blueBg {
+  padding: 2.5rem 0 3.75rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Desktop styles - applies when screen width is 768px or larger */
+@media (min-width: 768px) {
+  /* Flex layout for car containers */
+  .cars-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cars-section div {
+    width: 32.5%;
+  }
+
+  .two-cars div {
+    width: 48%;
+  }
+  
+  /* Show the missing car element on desktop */
+  .missing-car {
+    width: 40%;
+    display: flex;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the missing car text content */
+  .missing-car p {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+}
